@@ -28,7 +28,7 @@ def Cos(y):
 
 print("Calculator")
 while(True):
-    op_type=input("Mention type of operation (Algebra, Factorial or Trigonometry): ")
+    op_type=input("Mention type of operation (Algebra, Factorial, SquareRoot or Trigonometry): ")
     if op_type=="Algebra":
         a=int(input("Enter 1st Number: "))
         op=input("Enter Operator (+, -, *, /, ^, !): ") 
@@ -72,11 +72,23 @@ while(True):
             else:
                 print(round(Cos(x),3))
         elif fn=="Tan":
-            print(round(Sin(x)/Cos(x),3))
+            if angle==0 or angle==180:
+                print("0")
+            elif angle==45:
+                print("1")
+            elif angle==135:
+                print("-1")
+            elif angle==90:
+                print("undefined")
+            else:
+                print(round(Sin(x)/Cos(x),3))
         else:
             print("Invalid Operation!")
     elif op_type=="Factorial":
         c=int(input("Enter your number: "))
         print(factorial(c))
+    elif op_type=="SquareRoot":
+        c=int(input("Enter your number: "))
+        print(c**(1/2))
     else:
         print("Invalid Operation!")
