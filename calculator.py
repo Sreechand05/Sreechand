@@ -30,9 +30,9 @@ print("Calculator")
 while(True):
     op_type=input("Mention type of operation (Algebra, Factorial, SquareRoot or Trigonometry): ")
     if op_type=="Algebra":
-        a=int(input("Enter 1st Number: "))
-        op=input("Enter Operator (+, -, *, /, ^, !): ") 
-        b=int(input("Enter 2nd Number: "))
+        a=float(input("Enter 1st Number: "))
+        op=input("Enter Operator (+, -, *, /, ^): ") 
+        b=float(input("Enter 2nd Number: "))
         if op == "+":
             print(a+b)
         elif op == "-":
@@ -47,7 +47,7 @@ while(True):
             print("Invalid Operation!")
     elif op_type=="Trigonometry":
         fn=input("Mention type of ratio (Sin, Cos, Tan): ")
-        angle=int(input("Type the angle in degrees: "))
+        angle=float(input("Type the angle in degrees: "))
         x=(angle/180)*3.14
         if fn=="Sin":
             if angle==0 or angle==180:
@@ -88,7 +88,7 @@ while(True):
         c=int(input("Enter your number: "))
         print(factorial(c))
     elif op_type=="SquareRoot":
-        c=int(input("Enter your number: "))
+        c=float(input("Enter your number: "))
         print(c**(1/2))
     else:
         print("Invalid Operation!")
