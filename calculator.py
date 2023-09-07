@@ -34,15 +34,15 @@ while(True):
         op=input("Enter Operator (+, -, *, /, ^): ") 
         b=float(input("Enter 2nd Number: "))
         if op == "+":
-            print(a+b)
+            print(round(a+b, 3))
         elif op == "-":
-            print(a-b)
+            print(round(a-b, 3))
         elif op == "*":
-            print(a*b)
+            print(round(a*b, 3))
         elif op == "/":
-            print(a/b)
+            print(round(a/b, 3))
         elif op == "^":
-            print(a**b)
+            print(round(a**b, 3))
         else:
             print("Invalid Operation!")
     elif op_type=="Trigonometry":
